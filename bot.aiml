@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aiml version="1.0.1">
+<aiml version="2.0">
+<category>
+  <pattern>XTHING UNKNOWN</pattern>
+  <template>
+    <think>
+      <set name="type">unknown</set>
+      <set name="an">true</set>
+      <set name="word">unknown</set>
+      <set name="wordan"></set>
+      <set name="plural">unknown</set>
+      <set name="material">unknown</set>
+      <set name="color">unknown</set>
+      <set name="has">unknown</set>
+      <set name="does">unknown</set>
+      <set name="where">unknown</set>
+      <set name="rhyme">unknown</set>
+      <set name="volume">unknown</set>
+      <set name="speed">unknown</set>
+    </think>
+  </template>
+</category>
 <category>
   <pattern>XTHING *</pattern>
-  <template><srai>XUNKNOWN</srai></template>
+  <template><srai>XTHING UNKNOWN</srai></template>
 </category>
 <category>
   <pattern>XUNKNOWN</pattern>
-  <that>XUNKNOWN</that>
   <template>I dont know what that is.</template>
 </category>
 <category>
@@ -14,14 +33,14 @@
   <template>
     <think>
       <set name="type">oc</set>
-      <set name="word">funy</set>
-      <set name="plural">funi</set>
-      <set name="material">hh</set>
-      <set name="color">funy</set>
-      <set name="has">funiness</set>
-      <set name="does">memes things</set>
-      <set name="where">Bugs</set>
-      <set name="rhyme">duni</set>
+      <set name="word">pumkin</set>
+      <set name="plural">pumkins</set>
+      <set name="material">funy</set>
+      <set name="color">orange and brown</set>
+      <set name="has">dot eyes</set>
+      <set name="does">creates art</set>
+      <set name="where">George Da</set>
+      <set name="rhyme">Bumkin</set>
       <set name="volume">0</set>
       <set name="speed">0</set>
     </think>
@@ -64,6 +83,107 @@
   </template>
 </category>
 <category>
+  <pattern>XORIGIN</pattern>
+  <template>Hello there.</template>
+</category>
+<category>
+  <pattern>XSEARCH</pattern>
+  <template>
+    <random>
+      <li>mario</li>
+      <li>nintendo</li>
+      <li>donkey%20kong</li>
+      <li>funny</li>
+      <li>memes</li>
+      <li>rage+comics</li>
+      <li>rage%20comics</li>
+      <li>mario%20memes</li>
+      <li>gangster%20elmo</li>
+      <li>tickle%20kenny%20afton</li>
+    </random>
+  </template>
+</category>
+<category>
+  <pattern>XFLICKR *</pattern>
+  <template>https://loremflickr.com/320/240/<star/></template>
+</category>
+<category>
+  <pattern>XRNDFLICKR</pattern>
+  <template><srai>XFLICKR <srai>XSEARCH</srai></srai></template>
+</category>
+<category>
+  <pattern>XNAMEY</pattern>
+  <template>
+    <random>
+      <li>Blorple</li>
+      <li>Blorgle</li>
+      <li>Glorgle</li>
+      <li>Glorpus</li>
+      <li>Gloopglop</li>
+      <li>Zibber</li>
+      <li>Glop</li>
+      <li>Glonk</li>
+      <li>Glarpue</li>
+      <li>Zabba</li>
+      <li>Glergoo</li>
+    </random>
+  </template>
+</category>
+<category>
+  <pattern>XYEETY</pattern>
+  <template>
+    <random>
+      <li>yeety</li>
+    <li>scatty</li>
+    <li>derpy</li>
+      <li>memey</li>
+      <li>crazy</li>
+      <li>silly</li>
+      <li>frucktarded</li>
+      <li>tickly</li>
+      <li>fitey</li>
+      <li>penisy</li>
+      <li>danky</li>
+    </random>
+  </template>
+</category>
+<category>
+  <pattern>XRUELY</pattern>
+  <template>
+    <random>
+      <li>Object</li>
+      <li>Voidling</li>
+      <li>ENAOc</li>
+      <li>Penis</li>
+      <li>Blocky</li>
+      <li>Starry</li>
+      <li>Wonderful</li>
+    </random>
+  </template>
+</category>
+<category>
+  <pattern>XREPLY</pattern>
+  <template>
+    <random>
+      <li>Dont forget to like, comment, and subscribe!</li>
+      <li>You know i could fart on you but my farts need to be sexier</li>
+      <li>The radiating foot aura?</li>
+      <li>You are Winner! )</li>
+      <li>Ratio!</li>
+      <li>Caught in 4K</li>
+      <li>Down bad.</li>
+      <li>Ratiod by <srai>XYEETUS</srai></li>
+      <li>You make my boinkus yeetglorp.</li>
+      <li>Really now?</li>
+      <li>Your really acting like <srai>XNAMEY</srai> The <srai>XYEETY</srai> <srai>XRUELY</srai> right now.</li>
+    </random>
+  </template>
+</category>
+<category>
+  <pattern>*</pattern>
+  <template><srai>XREPLY</srai></template>
+</category>
+<category>
   <pattern>HELLO</pattern>
   <template>Hello there.</template>
 </category>
@@ -100,7 +220,7 @@
 </category>
 <category>
   <pattern>WHAT IS YOUR NAME</pattern>
-  <template>My name is bot.aiml</template>
+  <template>My name is <bot name="name"/></template>
 </category>
 <category>
   <pattern>WHAT ARE WE TALKING ABOUT</pattern>
@@ -127,13 +247,31 @@
   <template><srai>WHAT IS THE DATE</srai></template>
 </category>
 <category>
+  <pattern>WHAT IS THE DAY</pattern>
+  <template>Today is <date format="%A"/></template>
+</category>
+<category>
+  <pattern>WHAT IS THE DAY *</pattern>
+  <template><srai>WHAT IS THE DAY</srai></template>
+</category>
+<category>
+  <pattern>IS TODAY *</pattern>
+  <template>
+    <think><set name="today"><date format="%A"/></set></think>
+    <condition name="today">
+      <li><value><star/></value>Yes.</li>
+      <li>No.</li>
+    </condition>
+  </template>
+</category>
+<category>
   <pattern>ARE YOU AN ARTIST</pattern>
   <template>Yes. Here&apos;s my latest piece: <srai>RNDCOL</srai><srai>RNDCOL</srai><srai>RNDCOL</srai><srai>RNDCOL</srai><srai>RNDCOL</srai></template>
 </category>
 <category>
   <pattern>WHAT IS *</pattern>
   <template>
-    <srai>XTHING <star/></srai><condition name="person"><li value="">A </li><li></li></condition><star/> is <condition name="an"><li value="">a</li><li>an</li></condition> <get name="type"/>
+    <srai>XTHING <star/></srai><formal><star/></formal> is <condition name="an"><li value="">a</li><li>an</li></condition> <get name="type"/>
     <condition name="where">
       <li value=""></li>
       <li>usually found in <get name="where"/></li>
@@ -146,10 +284,14 @@
 </category>
 <category>
   <pattern>WHAT COLOR IS *</pattern>
-  <template><srai>XTHING <star/></srai><condition name="person"><li value="">A </li><li></li></condition><star/> is usually <get name="color"/></template>
+  <template><srai>XTHING <star/></srai><condition name="person"><li value="true"></li><li>A </li></condition><star/> is usually <get name="color"/></template>
 </category>
 <category>
   <pattern>WHAT IS A *</pattern>
+  <template><srai>WHAT IS <star/></srai></template>
+</category>
+<category>
+  <pattern>WHAT IS AN *</pattern>
   <template><srai>WHAT IS <star/></srai></template>
 </category>
 <category>
@@ -159,6 +301,16 @@
 <category>
   <pattern>WHO IS *</pattern>
   <template><srai>WHAT IS <star/></srai></template>
+</category>
+<category>
+  <pattern>A *</pattern>
+  <that>WHAT IS A *</that>
+  <template>Understood.</template>
+</category>
+<category>
+  <pattern>*</pattern>
+  <that>WHAT IS A *</that>
+  <template>Understood.</template>
 </category>
 <category>
   <pattern>COCK</pattern>
@@ -174,6 +326,38 @@
 </category>
 <category>
   <pattern>* COCK *</pattern>
+  <template><srai>COCK</srai></template>
+</category>
+<category>
+  <pattern>CUM</pattern>
+  <template><srai>COCK</srai></template>
+</category>
+<category>
+  <pattern>* CUM</pattern>
+  <template><srai>COCK</srai></template>
+</category>
+<category>
+  <pattern>CUM *</pattern>
+  <template><srai>COCK</srai></template>
+</category>
+<category>
+  <pattern>* CUM *</pattern>
+  <template><srai>COCK</srai></template>
+</category>
+<category>
+  <pattern>SEX</pattern>
+  <template><srai>COCK</srai></template>
+</category>
+<category>
+  <pattern>* SEX</pattern>
+  <template><srai>COCK</srai></template>
+</category>
+<category>
+  <pattern>SEX *</pattern>
+  <template><srai>COCK</srai></template>
+</category>
+<category>
+  <pattern>* SEX *</pattern>
   <template><srai>COCK</srai></template>
 </category>
 <category>
