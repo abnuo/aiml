@@ -47,42 +47,6 @@
   </template>
 </category>
 <category>
-  <pattern>XTHING DOG</pattern>
-  <template>
-    <think>
-      <set name="type">animal</set>
-      <set name="an">true</set>
-      <set name="word">dog</set>
-      <set name="plural">dogs</set>
-      <set name="material">flesh</set>
-      <set name="color">many colors</set>
-      <set name="has">fur</set>
-      <set name="does">barks</set>
-      <set name="rhyme">fog</set>
-      <set name="volume">6</set>
-      <set name="speed">20</set>
-    </think>
-  </template>
-</category>
-<category>
-  <pattern>XTHING CAT</pattern>
-  <template>
-    <think>
-      <set name="type">animal</set>
-      <set name="an">true</set>
-      <set name="word">cat</set>
-      <set name="plural">cats</set>
-      <set name="material">flesh</set>
-      <set name="color">many colors</set>
-      <set name="has">fur</set>
-      <set name="does">meows</set>
-      <set name="rhyme">mat</set>
-      <set name="volume">9</set>
-      <set name="speed">30</set>
-    </think>
-  </template>
-</category>
-<category>
   <pattern>XORIGIN</pattern>
   <template>Hello there.</template>
 </category>
