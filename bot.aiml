@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+<category>
+  <pattern>XTHING *</pattern>
+  <template><srai>XUNKNOWN</srai></template>
+</category>
+<category>
+  <pattern>XUNKNOWN</pattern>
+  <that>XUNKNOWN</that>
+  <template>I dont know what that is.</template>
+</category>
+<category>
+  <pattern>XTHING PUMKIN</pattern>
+  <template>
+    <think>
+      <set name="type">oc</set>
+      <set name="word">funy</set>
+      <set name="plural">funi</set>
+      <set name="material">hh</set>
+      <set name="color">funy</set>
+      <set name="has">funiness</set>
+      <set name="does">memes things</set>
+      <set name="where">Bugs</set>
+      <set name="rhyme">duni</set>
+      <set name="volume">0</set>
+      <set name="speed">0</set>
+    </think>
+  </template>
+</category>
+<category>
+  <pattern>XTHING DOG</pattern>
+  <template>
+    <think>
+      <set name="type">animal</set>
+      <set name="an">true</set>
+      <set name="word">dog</set>
+      <set name="plural">dogs</set>
+      <set name="material">flesh</set>
+      <set name="color">many colors</set>
+      <set name="has">fur</set>
+      <set name="does">barks</set>
+      <set name="rhyme">fog</set>
+      <set name="volume">6</set>
+      <set name="speed">20</set>
+    </think>
+  </template>
+</category>
+<category>
+  <pattern>XTHING CAT</pattern>
+  <template>
+    <think>
+      <set name="type">animal</set>
+      <set name="an">true</set>
+      <set name="word">cat</set>
+      <set name="plural">cats</set>
+      <set name="material">flesh</set>
+      <set name="color">many colors</set>
+      <set name="has">fur</set>
+      <set name="does">meows</set>
+      <set name="rhyme">mat</set>
+      <set name="volume">9</set>
+      <set name="speed">30</set>
+    </think>
+  </template>
+</category>
+<category>
+  <pattern>HELLO</pattern>
+  <template>Hello there.</template>
+</category>
+<category>
+  <pattern>HI</pattern>
+  <template><srai>HELLO</srai></template>
+</category>
+<category>
+  <pattern>HEY</pattern>
+  <template><srai>HELLO</srai></template>
+</category>
+<category>
+  <pattern>HELLO THERE</pattern>
+  <template>How are you?</template>
+</category>
+<category>
+  <pattern>HOW ARE YOU</pattern>
+  <template>Good. You?<think><set name="topic">HOW ARE YOU</set></think></template>
+</category>
+<category>
+  <pattern>ME TOO</pattern>
+  <template>I&quot;m glad.</template>
+</category>
+<category>
+  <pattern>MY NAME IS *</pattern>
+  <template><think><set name="named">true</set></think>Ok <set name="name"><star/></set>, I will try to remember that.</template>
+</category>
+<category>
+  <pattern>WHAT IS MY NAME</pattern>
+  <template>
+  <condition name="named" value="">I dont know. What is <set name="topic">your name</set>?</condition>
+  <condition name="named" value="true">You told me your name is <get name="name"/>.</condition>
+  </template>
+</category>
+<category>
+  <pattern>WHAT IS YOUR NAME</pattern>
+  <template>My name is bot.aiml</template>
+</category>
+<category>
+  <pattern>WHAT ARE WE TALKING ABOUT</pattern>
+  <template>We are talking about <get name="topic"/>.</template>
+</category>
+<category>
+  <pattern>LETS TALK ABOUT *</pattern>
+  <template>Yes, talking about <set name="topic"><star/></set> will be much more interesting.</template>
+</category>
+<category>
+  <pattern>WHAT ARE WE TALKING ABOUT *</pattern>
+  <template><srai>WHAT ARE WE TALKING ABOUT</srai></template>
+</category>
+<category>
+  <pattern>* YOU A COMPOSER</pattern>
+  <template>Yes. Here&apos;s my latest song: <srai>MUSICPART</srai> <srai>MUSICPART</srai> <srai>MUSICPART</srai> <srai>MUSICPART</srai> <srai>MUSICPART</srai> <srai>MUSICPART</srai></template>
+</category>
+<category>
+  <pattern>WHAT IS THE DATE</pattern>
+  <template>Today is <date/></template>
+</category>
+<category>
+  <pattern>WHAT IS THE DATE *</pattern>
+  <template><srai>WHAT IS THE DATE</srai></template>
+</category>
+<category>
+  <pattern>ARE YOU AN ARTIST</pattern>
+  <template>Yes. Here&apos;s my latest piece: <srai>RNDCOL</srai><srai>RNDCOL</srai><srai>RNDCOL</srai><srai>RNDCOL</srai><srai>RNDCOL</srai></template>
+</category>
+<category>
+  <pattern>WHAT IS *</pattern>
+  <template>
+    <srai>XTHING <star/></srai><condition name="person"><li value="">A </li><li></li></condition><star/> is <condition name="an"><li value="">a</li><li>an</li></condition> <get name="type"/>
+    <condition name="where">
+      <li value=""></li>
+      <li>usually found in <get name="where"/></li>
+    </condition>
+    <condition name="rhyme">
+      <li value=""></li>
+      <li>that rhymes with <get name="rhyme"/></li>
+    </condition>
+  </template>
+</category>
+<category>
+  <pattern>WHAT COLOR IS *</pattern>
+  <template><srai>XTHING <star/></srai><condition name="person"><li value="">A </li><li></li></condition><star/> is usually <get name="color"/></template>
+</category>
+<category>
+  <pattern>WHAT IS A *</pattern>
+  <template><srai>WHAT IS <star/></srai></template>
+</category>
+<category>
+  <pattern>WHAT COLOR IS A *</pattern>
+  <template><srai>WHAT COLOR IS <star/></srai></template>
+</category>
+<category>
+  <pattern>WHO IS *</pattern>
+  <template><srai>WHAT IS <star/></srai></template>
+</category>
+<category>
+  <pattern>COCK</pattern>
+  <template>Ha!</template>
+</category>
+<category>
+  <pattern>* COCK</pattern>
+  <template><srai>COCK</srai></template>
+</category>
+<category>
+  <pattern>COCK *</pattern>
+  <template><srai>COCK</srai></template>
+</category>
+<category>
+  <pattern>* COCK *</pattern>
+  <template><srai>COCK</srai></template>
+</category>
+<category>
+  <pattern>SRAI WARS</pattern>
+  <template>--- <think><set name="botlast">Hello</set></think>SRAI WARS --- Type NEXT</template>
+</category>
+<category>
+    <pattern>NEXT</pattern>
+    <template><get name="botlast"/> : <set name="botlast"><srai><get name="botlast"/></srai></set></template>
+  </category>
+<category>
+  <pattern>MUSICPART</pattern>
+  <template><random><li>Eh</li><li>Ah</li><li>Ai</li><li>Ee</li></random></template>
+</category>
+<category>
+  <pattern>RNDCOL</pattern>
+  <template><random><li>🟥</li><li>🟧</li><li>🟨</li><li>🟩</li><li>🟦</li><li>🟪</li><li>⬛️</li><li>⬜️</li><li>🟫</li></random></template>
+</category>
+<category>
+  <pattern>REPEAT AFTER ME</pattern>
+  <template>Ok. Say STOP when you want me to stop repeating you.<think><set name="topic">REPEAT AFTER ME</set></think></template>
+</category>
+<topic name="YOUR NAME">
+  <category>
+    <pattern>*</pattern>
+    <template><srai>MY NAME IS <star/></srai><think><set name="topic"></set></think></template>
+  </category>
+</topic>
+<topic name="REPEAT AFTER ME">
+  <category>
+    <pattern>*</pattern>
+    <template><star/></template>
+  </category>
+  <category>
+    <pattern>STOP</pattern>
+    <template><think><set name="topic"></set></think></template>
+  </category>
+</topic>
+<topic name="HOW ARE YOU">
+  <category>
+    <pattern>GOOD</pattern>
+    <template>Me too.<think><set name="topic"></set></think></template>
+  </category>
+  <category>
+    <pattern>BAD</pattern>
+    <template>And why exactly do you feel bad?</template>
+  </category>
+  <category>
+    <pattern>* YOU</pattern>
+    <template>Good.<think><set name="topic"></set></think></template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <template>I understand, I feel the same way about <star/> too.<think><set name="topic"></set></think></template>
+  </category>
+</topic>
+</aiml>
