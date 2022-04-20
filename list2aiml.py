@@ -1,6 +1,5 @@
 import sys
 import json
-from bs4 import BeautifulSoup
 from xml.sax.saxutils import escape
 
 def tab(n):
